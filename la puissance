@@ -1,9 +1,9 @@
-
 def power_2(limit):
-    result = [2**i for i in range(limit) if 2**i < limit]
+    result = [2**i for i in range(limit) if 2**i <= limit]
     return result
 
 # test
 if __name__ == "__main__":
     result = power_2(10)
+    result.insert(0, 0)
     print(result)
