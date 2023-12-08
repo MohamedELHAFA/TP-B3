@@ -1,0 +1,21 @@
+
+def check_ip_format(ip):
+    parts = ip.split('.')
+    
+    if len(parts) != 4:
+        return False
+    
+    for part in parts:
+        if not part.isdigit() or not (0 <= int(part) <= 255):
+            return False
+    
+    return True
+
+# test
+if __name__ == "__main__":
+    result1 = check_ip_format('10.0.0.0')
+    print(result1) 
+    
+    result2 = check_ip_format('192.12.')
+    print(result2) 
+
